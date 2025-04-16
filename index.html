@@ -44,8 +44,9 @@
     .social-links a {
       margin-right: 1rem;
       text-decoration: none;
-      color: #003366;
+      color: #0077cc;
       font-weight: bold;
+      font-size: 1.2rem;
     }
     .btn {
       display: inline-block;
@@ -55,6 +56,30 @@
       color: white;
       text-decoration: none;
       border-radius: 5px;
+    }
+    form {
+      margin-top: 1rem;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: 'Roboto', sans-serif;
+    }
+    button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
     }
   </style>
 </head>
@@ -132,8 +157,14 @@
   </section>
 
   <footer style="text-align:center; margin-top: 50px;">
-    <p>Contact: <a href="mailto:mmahmodul24@gmail.com">mmahmodul24@gmail.com</a></p>
-    <p>&copy; মাহমুদুল হাসান</p>
+    <h3>Send Me a Message</h3>
+    <form action="mailto:mmahmodul24@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="margin-top:20px;">&copy; মাহমুদুল হাসান</p>
   </footer>
 
 </body>
