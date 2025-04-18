@@ -16,16 +16,17 @@
   <meta property="og:description" content="Safety Specialist | BBA in Management | Certified Professional">
   <meta property="og:url" content="https://mahmodulwebsite.github.io/Mdmahmodulhasan/">
   <meta property="og:type" content="website">
-</head><!-- Google Site Verification -->
-<meta name="google-site-verification" content="Yke1uxuhXkyFOjzJz9RDCmvxaj513LHnwZnpS3gmvdE" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Md. Mahmodul Hasan - Certified Safety Specialist Portfolio" />
-  <meta name="keywords" content="Mahmodul Hasan, Safety Specialist, Portfolio, IOSH, OSHA" />
-  <meta name="author" content="Md. Mahmodul Hasan" />
-  <title>Md. Mahmodul Hasan</title>
+
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="Yke1uxuhXkyFOjzJz9RDCmvxaj513LHnwZnpS3gmvdE" />
+
+  <!-- Font & Styles -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" />
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
@@ -53,9 +54,29 @@
       font-weight: bold;
     }
 
+    nav a:hover {
+      color: #66ccff;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
     section {
       padding: 2rem 1rem;
       border-bottom: 1px solid #cce;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    section:nth-of-type(2) { animation-delay: 0.2s; }
+    section:nth-of-type(3) { animation-delay: 0.4s; }
+    section:nth-of-type(4) { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h2 {
@@ -69,25 +90,16 @@
       margin: 1rem auto;
       display: block;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
     }
 
     ul {
       padding-left: 1.5rem;
-    }
-
-    .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .social-links a {
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: bold;
-      font-size: 1.1rem;
     }
 
     .btn {
@@ -101,12 +113,9 @@
       font-size: 1rem;
     }
 
-    form {
-      margin-top: 1rem;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 1rem;
+    .btn:hover, button:hover {
+      background-color: #0055aa;
+      transition: background-color 0.3s ease;
     }
 
     input, textarea {
@@ -116,7 +125,6 @@
       margin-bottom: 1rem;
       border: 1px solid #ccc;
       border-radius: 5px;
-      font-family: 'Roboto', sans-serif;
     }
 
     button {
@@ -143,6 +151,37 @@
         font-size: 1.1rem;
       }
     }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    footer input, footer textarea {
+      border: 1px solid #88a;
+    }
+
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #003366;
+      color: white;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #0055aa;
+    }
   </style>
 </head>
 <body>
@@ -161,32 +200,27 @@
   <img src="profile.jpg" alt="Mahmodul Hasan" class="profile-pic" />
 
   <section id="about">
-  <h2>About Me</h2>
-  <p>Hello! I'm <strong>Md. Mahmodul Hasan</strong>, a dedicated student of BBA in Management and an internationally certified Safety Specialist. I am passionate about creating safer workplaces through training, awareness, and effective safety management.</p>
-
-  <h3>Professional Skills</h3>
-  <ul>
-    <li>Certified in IOSH, OSHA 30 Hours, Fire Safety, First Aid, Work at Height, etc.</li>
-    <li>Computer proficiency: MS Office, IT Troubleshooting, Internet Tools</li>
-    <li>Languages: Fluent in Bengali and English</li>
-  </ul>
-
-  <h3>Achievements & Experience</h3>
-  <p>I have successfully completed <strong>10+</strong> international certifications through Besi Private Ltd. and gained <strong>2+ years</strong> of hands-on experience in health and safety practices.</p>
-
-  <h3>Goals</h3>
-  <p>My goal is to become a professional Safety Consultant and help industries implement smarter and safer systems that protect workers and improve productivity.</p>
-
-  <h3>Personal Information</h3>
-  <ul>
-    <li><strong>Phone:</strong> <a href="tel:+8801721125993">01721125993</a></li>
-    <li><strong>Email:</strong> <a href="mailto:mmahmodul24@gmail.com">mmahmodul24@gmail.com</a></li>
-    <li><strong>Location:</strong> Sreepur, Gazipur, Dhaka, Bangladesh</li>
-    <li><strong>Education:</strong> BBA in Management (National University)</li>
-  </ul>
-
-  <h3>Hobbies & Interests</h3>
-  <p>I enjoy learning about technology, participating in safety seminars, and being involved in social development initiatives.</p>
+    <h2>About Me</h2>
+    <p>Hello! I'm <strong>Md. Mahmodul Hasan</strong>, a dedicated student of BBA in Management and an internationally certified Safety Specialist. I am passionate about creating safer workplaces through training, awareness, and effective safety management.</p>
+    <h3>Professional Skills</h3>
+    <ul>
+      <li>Certified in IOSH, OSHA 30 Hours, Fire Safety, First Aid, Work at Height, etc.</li>
+      <li>Computer proficiency: MS Office, IT Troubleshooting, Internet Tools</li>
+      <li>Languages: Fluent in Bengali and English</li>
+    </ul>
+    <h3>Achievements & Experience</h3>
+    <p>I have successfully completed <strong>10+</strong> international certifications through Besi Private Ltd. and gained <strong>2+ years</strong> of hands-on experience in health and safety practices.</p>
+    <h3>Goals</h3>
+    <p>My goal is to become a professional Safety Consultant and help industries implement smarter and safer systems that protect workers and improve productivity.</p>
+    <h3>Personal Information</h3>
+    <ul>
+      <li><strong>Phone:</strong> <a href="tel:+8801721125993">01721125993</a></li>
+      <li><strong>Email:</strong> <a href="mailto:mmahmodul24@gmail.com">mmahmodul24@gmail.com</a></li>
+      <li><strong>Location:</strong> Sreepur, Gazipur, Dhaka, Bangladesh</li>
+      <li><strong>Education:</strong> BBA in Management (National University)</li>
+    </ul>
+    <h3>Hobbies & Interests</h3>
+    <p>I enjoy learning about technology, participating in safety seminars, and being involved in social development initiatives.</p>
     <p>Languages: Bengali (Native), English (Fluent)</p>
   </section>
 
@@ -213,7 +247,7 @@
       <li>Fire Safety Management</li>
       <li>Scaffolding</li>
       <li>Lifting and Rigging</li>
-      <li>confined Space/Work at Height</li>
+      <li>Confined Space/Work at Height</li>
       <li>Workplace Health and Safety</li>
       <li>Work Permit Receiver</li>
     </ul>
@@ -225,37 +259,33 @@
     <p>- Trained in safety management systems and real-world application.</p>
     <p>- Completed trainings on compliance and emergency management.</p>
   </section>
-</section> <!-- Experience section ends -->
 
-<section id="why-safety-matters" style="background-color:#eaf6ff; padding: 2rem; margin-top: 3rem;">
-  <h2 style="text-align: center; color: #003366;">Why Safety Matters</h2>
-  <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: auto; line-height: 1.8;">
-    Many people think, "Accidents can happen anywhere," but the real question is—<strong>if it can be prevented, shouldn't we do something about it?</strong>
-  </p>
+  <section id="why-safety-matters" style="background-color:#eaf6ff; padding: 2rem; margin-top: 3rem;">
+    <h2 style="text-align: center; color: #003366;">Why Safety Matters</h2>
+    <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: auto; line-height: 1.8;">
+      Many people think, "Accidents can happen anywhere," but the real question is—<strong>if it can be prevented, shouldn't we do something about it?</strong>
+    </p>
+    <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: auto; line-height: 1.8;">
+      Safety is not just about wearing a helmet or having a fire extinguisher nearby. It’s a mindset, a culture of responsibility, and a commitment to protecting lives.
+    </p>
+    <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: auto; line-height: 1.8;">
+      When safety is neglected, the consequences can be devastating:
+    </p>
+    <ul style="max-width: 800px; margin: auto; font-size: 1.05rem; padding-left: 2rem; color: #333;">
+      <li>Serious injuries or even death</li>
+      <li>Financial losses for individuals and companies</li>
+      <li>Legal complications and damage to reputation</li>
+      <li>Loss of productivity and employee morale</li>
+    </ul>
+    <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: auto; line-height: 1.8; text-align: center; margin-top: 2rem;">
+      <strong>Every safety measure, no matter how small, plays a big role in preventing harm.</strong><br>
+      Let’s build a safer future together. Because safety isn’t just a rule—it’s a responsibility.
+    </p>
+  </section>
 
-  <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: auto; line-height: 1.8;">
-    Safety is not just about wearing a helmet or having a fire extinguisher nearby. It’s a mindset, a culture of responsibility, and a commitment to protecting lives.
-  </p>
-
-  <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: auto; line-height: 1.8;">
-    When safety is neglected, the consequences can be devastating:
-  </p>
-
-  <ul style="max-width: 800px; margin: auto; font-size: 1.05rem; padding-left: 2rem; color: #333;">
-    <li>Serious injuries or even death</li>
-    <li>Financial losses for individuals and companies</li>
-    <li>Legal complications and damage to reputation</li>
-    <li>Loss of productivity and employee morale</li>
-  </ul>
-
-  <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: auto; line-height: 1.8; text-align: center; margin-top: 2rem;">
-    <strong>Every safety measure, no matter how small, plays a big role in preventing harm.</strong><br>
-    Let’s build a safer future together. Because safety isn’t just a rule—it’s a responsibility.
-  </p>
-</section>
   <section id="contact">
     <h2>Contact Me</h2>
-    <!-- তোমার মূল কোডের পর Contact Section শেষ -->
+  </section>
 
   <section id="social-media">
     <h2 style="text-align: center;">Social Media</h2>
@@ -268,7 +298,7 @@
     </ul>
   </section>
 
-  <footer style="text-align:center; margin-top: 50px;">
+  <footer>
     <h3>Send Me a Message</h3>
     <form action="mailto:mmahmodul24@gmail.com" method="post" enctype="text/plain">
       <input type="text" name="name" placeholder="Your Name" required />
@@ -279,5 +309,20 @@
     <p style="margin-top:20px;">&copy; মাহমুদুল হাসান-২০২৫</p>
   </footer>
 
+  <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
+  <script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
