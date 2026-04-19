@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Safety Laws & Standards | Mahmodul Hasan</title>
+  <meta name="description" content="Comprehensive guide to global safety laws: OSHA, IOSH, NEBOSH, ISO, ILO, Aramco, SAIPEM safety standards. Written by Md. Mahmodul Hasan.">
+  <meta name="author" content="Md. Mahmodul Hasan">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Mulish:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+/* ══════ VARIABLES ══════ */
+:root {
+  --bg:        #f7f6f2;
+  --bg2:       #eeecea;
+  --navy:      #0c1f3d;
+  --navy2:     #162f58;
+  --gold:      #c8872a;
+  --gold2:     #e8a830;
+  --white:     #ffffff;
+  --text:      #1e2535;
+  --muted:     #64748b;
+  --border:    rgba(12,31,61,0.09);
+
+  /* Category colors */
+  --c-osha:   #d64e12;
+  --c-iosh:   #1a6fb5;
+  --c-nebosh: #7c3aed;
+  --c-iso:    #0891b2;
+  --c-ilo:    #059669;
+  --c-aramco: #b45309;
+  --c-saipem: #be185d;
+  --c-general:#334155;
+  --c-fire:   #dc2626;
+  --c-height: #0369a1;
+  --c-elec:   #f59e0b;
+  --c-conf:   #4f46e5;
+  --c-chem:   #16a34a;
+  --c-ptw:    #7c3aed;
+  --c-lift:   #9f1239;
+  --c-mech:   #1e40af;
+  --c-ppe:    #065f46;
+  --c-emg:    #991b1b;
+  --c-road:   #1d4ed8;
+  --c-excav:  #92400e;
+  --c-culture:#6d28d9;
+  --c-sign:   #0e7490;
+
+  --r: 14px;
+  --tr: all 0.25s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Mulish', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ══════ TOPBAR ══════ */
+.topbar {
+  background: var(--navy);
+  color: rgba(255,255,255,0.6);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 8px 20px;
+  text-transform: uppercase;
+}
+.topbar span { color: var(--gold2); }
+
+/* ══════ HERO ══════ */
+.hero {
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+  padding: 70px 24px 80px;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(200,135,42,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,135,42,0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+.hero::after {
+  content: 'SAFETY';
+  position: absolute;
+  right: -60px; top: -20px;
+  font-family: 'Syne', sans-serif;
+  font-size: 18rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.02);
+  pointer-events: none;
+  line-height: 1;
+  user-select: none;
+}
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(200,135,42,0.15);
+  border: 1px solid rgba(200,135,42,0.35);
+  color: var(--gold2);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 7px 18px;
+  border-radius: 30px;
+  margin-bottom: 28px;
+  animation: fadeUp 0.7s ease both;
+}
+.hero-tag::before {
+  content: '';
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--gold2);
+  animation: blink 1.8s ease infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 18px;
+  animation: fadeUp 0.8s ease 0.1s both;
+}
+.hero h1 em { color: var(--gold2); font-style: normal; }
+
+.hero-desc {
+  font-size: 16px;
+  color: rgba(255,255,255,0.58);
+  max-width: 620px;
+  line-height: 1.75;
+  margin-bottom: 36px;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  animation: fadeUp 0.8s ease 0.3s both;
+}
+.hstat {
+  display: flex;
+  flex-direction: column;
+}
+.hstat-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--gold2);
+  line-height: 1;
+}
+.hstat-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* Back link */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  transition: var(--tr);
+}
+.back-btn:hover { color: var(--gold2); }
+.back-btn::before { content: '←'; }
+
+/* ══════ STICKY NAV ══════ */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(12,31,61,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(200,135,42,0.2);
+  padding: 0 24px;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.sticky-nav::-webkit-scrollbar { display: none; }
+.snav-inner {
+  display: inline-flex;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.snav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.5);
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: var(--tr);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+.snav-btn:hover { color: var(--gold2); }
+.snav-btn.active { color: var(--gold2); border-bottom-color: var(--gold2); }
+
+/* ══════ LAYOUT ══════ */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+/* ══════ CHAPTER HEADING ══════ */
+.chapter-head {
+  margin: 60px 0 28px;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+.chapter-head:first-of-type { margin-top: 0; }
+.chapter-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba(12,31,61,0.06);
+  line-height: 1;
+  flex-shrink: 0;
+  user-select: none;
+}
+.chapter-info { padding-bottom: 6px; }
+.chapter-org {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.chapter-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+/* ══════ ORG BADGE ══════ */
+.org-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+/* ══════ SECTION CARD ══════ */
+.scard {
+  background: var(--white);
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: var(--tr);
+}
+.scard:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.09);
+  transform: translateY(-2px);
+}
+.scard-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  cursor: pointer;
+  user-select: none;
+}
+.scard-icon {
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  color: var(--white);
+}
+.scard-meta { flex: 1; }
+.scard-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+}
+.scard-sub {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 500;
+  margin-top: 2px;
+}
+.scard-toggle {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+  color: var(--muted);
+  transition: var(--tr);
+  flex-shrink: 0;
+}
+.scard.open .scard-toggle { transform: rotate(180deg); color: var(--navy); }
+
+.scard-body {
+  display: none;
+  padding: 0 22px 20px 78px;
+}
+.scard.open .scard-body { display: block; }
+
+/* Rules list */
+.rules-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rules-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14.5px;
+  color: var(--text);
+  line-height: 1.65;
+  padding: 10px 14px;
+  background: var(--bg);
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+  transition: var(--tr);
+}
+.rules-list li:hover {
+  background: var(--bg2);
+}
+.rule-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  min-width: 26px;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+.rule-ref {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  margin-left: 8px;
+  vertical-align: middle;
+  opacity: 0.85;
+}
+
+/* ══════ ORG OVERVIEW CARDS ══════ */
+.org-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+  margin-bottom: 56px;
+}
+.org-card {
+  border-radius: var(--r);
+  padding: 24px;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.org-card::before {
+  content: '';
+  position: absolute;
+  top: -30px; right: -30px;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  pointer-events: none;
+}
+.org-abbr {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.org-name {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.75;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+.org-desc {
+  font-size: 13px;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+.org-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  transition: var(--tr);
+}
+.org-link:hover { color: var(--white); }
+
+/* ══════ INFO BOX ══════ */
+.info-box {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
+  border-radius: var(--r);
+  padding: 28px 32px;
+  color: var(--white);
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.info-box::before {
+  content: '!';
+  position: absolute;
+  right: 24px; top: -10px;
+  font-family: 'Syne', sans-serif;
+  font-size: 8rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.04);
+  pointer-events: none;
+}
+.info-box h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold2);
+  margin-bottom: 10px;
+}
+.info-box p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.68);
+  line-height: 1.75;
+}
+
+/* ══════ SEARCH BAR ══════ */
+.search-wrap {
+  position: relative;
+  max-width: 520px;
+  margin-bottom: 48px;
+}
+.search-input {
+  width: 100%;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 50px;
+  padding: 14px 50px 14px 22px;
+  font-family: 'Mulish', sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  outline: none;
+  transition: var(--tr);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.search-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(200,135,42,0.12);
+}
+.search-icon {
+  position: absolute;
+  right: 18px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+/* ══════ REVEAL ══════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ══════ FOOTER ══════ */
+.page-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.35);
+  text-align: center;
+  padding: 28px 20px;
+  font-size: 13px;
+}
+.page-footer span { color: var(--gold2); }
+
+/* ══════ SCROLL TOP ══════ */
+#sTop {
+  display: none;
+  position: fixed;
+  bottom: 24px; right: 24px;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(200,135,42,0.4);
+  transition: var(--tr);
+  z-index: 999;
+}
+#sTop:hover { background: var(--gold2); transform: translateY(-3px); }
+
+/* ══════ ANIMATIONS ══════ */
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(18px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+
+/* ══════ RESPONSIVE ══════ */
+@media (max-width: 768px) {
+  .hero { padding: 50px 18px 60px; }
+  .page { padding: 32px 16px 60px; }
+  .hero-stats { gap: 20px; }
+  .scard-body { padding-left: 22px; }
+  .chapter-num { font-size: 3rem; }
+  .org-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">Global Safety Reference · Curated by <span>Md. Mahmodul Hasan</span> · Safety Specialist Bangladesh</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <a href="index.html" class="back-btn">Back to Portfolio</a>
+    <div class="hero-tag">Global Safety Laws & Standards</div>
+    <h1>The Complete <em>Safety</em><br>Knowledge Hub</h1>
+    <p class="hero-desc">A comprehensive reference of international safety standards from OSHA, IOSH, NEBOSH, ISO, ILO, Aramco, SAIPEM and more — written to help every safety professional learn, apply, and grow.</p>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-num">22</div><div class="hstat-label">Topic Modules</div></div>
+      <div class="hstat"><div class="hstat-num">10+</div><div class="hstat-label">Global Bodies</div></div>
+      <div class="hstat"><div class="hstat-num">200+</div><div class="hstat-label">Safety Rules</div></div>
+      <div class="hstat"><div class="hstat-num">Free</div><div class="hstat-label">For Everyone</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY NAV -->
+<div class="sticky-nav">
+  <div class="snav-inner">
+    <button class="snav-btn active" onclick="scrollTo('org-section')">🏢 Organizations</button>
+    <button class="snav-btn" onclick="scrollTo('general-section')">⚠️ General</button>
+    <button class="snav-btn" onclick="scrollTo('osha-section')">🇺🇸 OSHA</button>
+    <button class="snav-btn" onclick="scrollTo('iosh-section')">🇬🇧 IOSH</button>
+    <button class="snav-btn" onclick="scrollTo('nebosh-section')">📘 NEBOSH</button>
+    <button class="snav-btn" onclick="scrollTo('iso-section')">🌐 ISO</button>
+    <button class="snav-btn" onclick="scrollTo('ilo-section')">🕊 ILO</button>
+    <button class="snav-btn" onclick="scrollTo('aramco-section')">🛢 Aramco</button>
+    <button class="snav-btn" onclick="scrollTo('saipem-section')">⚙️ SAIPEM</button>
+    <button class="snav-btn" onclick="scrollTo('topics-section')">📋 Topics</button>
+  </div>
+</div>
+
+<!-- MAIN PAGE -->
+<div class="page">
+
+  <!-- SEARCH -->
+  <div class="search-wrap reveal">
+    <input class="search-input" type="text" id="searchInput" placeholder="Search safety rules, topics, organizations..." oninput="doSearch()">
+    <span class="search-icon">🔍</span>
+  </div>
+
+  <!-- ══ ORG OVERVIEW ══ -->
+  <div id="org-section" class="reveal">
+    <div class="chapter-head">
+      <div class="chapter-num">00</div>
+      <div class="chapter-info">
+        <div class="chapter-org" style="color:var(--gold)">Reference Guide</div>
+        <div class="chapter-title">Global Safety Organizations</div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h3>📌 Why These Organizations Matter</h3>
+      <p>These international bodies define the rules that protect millions of workers worldwide. Understanding each organization's mandate helps safety professionals apply the right standard in the right context — from oil rigs in Saudi Arabia to construction sites in Bangladesh.</p>
+    </div>
+
+    <div class="org-grid">
+      <div class="org-card" style="background:linear-gradient(135deg,#c0390b,#e85d2a)">
+        <div class="org-abbr">OSHA</div>
+        <div class="org-name">Occupational Safety and Health Administration</div>
+        <div class="org-desc">US federal agency enforcing workplace safety laws since 1970. Sets standards, conducts inspections, and issues citations.</div>
+        <a href="https://www.osha.gov" target="_blank" class="org-link">osha.gov →</a>
+      </div>
+      <div class="org-card" style="background:linear-gradient(135deg,#1558a8,#2980d4)">
+        <div class="org-abbr">IOSH</div>
+        <div class="org-name">Institution of Occupational Safety & Health</div>
+        <div class="org-desc">World's largest membership body for HSE professionals, based in UK. Provides qualifications, guidance, and advocacy.</div>
+        <a href="https://www.iosh.com" target="_blank" class="org-link">iosh.com →</a>
+      </div>
+      <div class="org-card" style="background:linear-gradient(135deg,#6d28d9,#9f51ef)">
+        <div class="org-abbr">NEBOSH</div>
+        <div class="org-name">National Examination Board in Occupational Safety and Health</div>
+        <div class="org-desc">Global provider of safety qualifications. NEBOSH certificates and diplomas are recognized in over 130 countries.</div>
+        <a href="https://www.nebosh.org.uk" target="_blank" class="org-link">nebosh.org.uk →</a>
+      </div>
+      <div class="org-card" style="background:linear-gradient(135deg,#0e7490,#0891b2)">
+        <div class="org-abbr">ISO</div>
+        <div class="org-name">International Organization for Standardization</div>
+        <div class="org-desc">Publishes ISO 45001 — the world's leading standard for occupational health and safety management systems.</div>
+        <a href="https://www.iso.org" target="_blank" class="org-link">iso.org →</a>
+      </div>
+      <div class="org-card" style="background:linear-gradient(135deg,#047857,#059669)">
+        <div class="org-abbr">ILO</div>
+        <div class="org-name">International Labour Organization</div>
+        <div class="org-desc">UN agency setting international labour standards. Its OSH conventions have been ratified by over 180 countries.</div>
+        <a href="https://www.ilo.org" target="_blank" class="org-link">ilo.org →</a>
+      </div>
+      <div class="org-card" style="background:linear-gradient(135deg,#92400e,#c8872a)">
+        <div class="org-abbr">ARAMCO</div>
+        <div class="org-name">Saudi Aramco — World's Largest Oil & Gas Company</div>
+        <div class="org-desc">Operates one of the most rigorous HSE systems globally. SAEP and GI standards are benchmarks for the oil industry.</div>
+        <a href="https://www.aramco.com" target="_blank" class="org-link">aramco.com →</a>
+      </div>
+      <div class="org-card" style="background:linear-gradient(135deg,#9d174d,#db2777)">
+        <div class="org-abbr">SAIPEM</div>
+        <div class="org-name">SAIPEM S.p.A. — Global Engineering & Construction</div>
+        <div class="org-desc">Italian multinational applying stringent HSSE management on offshore and onshore megaprojects worldwide.</div>
+        <a href="https://www.saipem.com" target="_blank" class="org-link">saipem.com →</a>
+      </div>
+      <div class="org-card" style="background:linear-gradient(135deg,#1e3a5f,#2e5fa3)">
+        <div class="org-abbr">HSE</div>
+        <div class="org-name">Health and Safety Executive (UK)</div>
+        <div class="org-desc">UK national regulator for workplace health, safety and welfare. Enforces HASAWA 1974 and related legislation.</div>
+        <a href="https://www.hse.gov.uk" target="_blank" class="org-link">hse.gov.uk →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ GENERAL SAFETY ══ -->
+  <div id="general-section" class="reveal">
+    <div class="chapter-head">
+      <div class="chapter-num">01</div>
+      <div class="chapter-info">
+        <div class="chapter-org" style="color:var(--c-general)">Universal Standards</div>
+        <div class="chapter-title">General Occupational Safety</div>
+      </div>
+    </div>
+
+    <div class="scard open" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-general)">⚠️</div>
+        <div class="scard-meta">
+          <div class="scard-title">Fundamental Safety Principles</div>
+          <div class="scard-sub">Universal rules applied by all major organizations</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-general)"><span class="rule-num" style="color:var(--c-general)">01</span>Hazard assessments (JSA/JHA) must be conducted before starting any job — required by OSHA 29 CFR 1910.132 & ISO 45001. <span class="rule-ref" style="background:rgba(51,65,85,0.1);color:var(--c-general)">OSHA · ISO</span></li>
+          <li style="border-left-color:var(--c-general)"><span class="rule-num" style="color:var(--c-general)">02</span>Personal Protective Equipment (PPE) must be job-specific, inspected daily, and replaced when damaged. <span class="rule-ref" style="background:rgba(51,65,85,0.1);color:var(--c-general)">OSHA 1910.132</span></li>
+          <li style="border-left-color:var(--c-general)"><span class="rule-num" style="color:var(--c-general)">03</span>Daily Toolbox Talks (TBT) are mandatory before work begins — a core requirement in Aramco SAEP-304 and SAIPEM HSE plans. <span class="rule-ref" style="background:rgba(51,65,85,0.1);color:var(--c-general)">Aramco · SAIPEM</span></li>
+          <li style="border-left-color:var(--c-general)"><span class="rule-num" style="color:var(--c-general)">04</span>Every worker must report near misses. Silent hazards are the leading cause of future accidents — ILO Convention 155 mandates this. <span class="rule-ref" style="background:rgba(51,65,85,0.1);color:var(--c-general)">ILO C155</span></li>
+          <li style="border-left-color:var(--c-general)"><span class="rule-num" style="color:var(--c-general)">05</span>Work permits (PTW) are required for all non-routine, high-risk tasks. Verbal authorization is never sufficient. <span class="rule-ref" style="background:rgba(51,65,85,0.1);color:var(--c-general)">Aramco GI-6.012</span></li>
+          <li style="border-left-color:var(--c-general)"><span class="rule-num" style="color:var(--c-general)">06</span>Safety signage must comply with ISO 7010 color-coding standards and be visible, clean, and unobstructed. <span class="rule-ref" style="background:rgba(51,65,85,0.1);color:var(--c-general)">ISO 7010</span></li>
+          <li style="border-left-color:var(--c-general)"><span class="rule-num" style="color:var(--c-general)">07</span>Regular safety observations (STOP, BBS) must be conducted and recorded — part of IOSH and NEBOSH frameworks. <span class="rule-ref" style="background:rgba(51,65,85,0.1);color:var(--c-general)">IOSH · NEBOSH</span></li>
+          <li style="border-left-color:var(--c-general)"><span class="rule-num" style="color:var(--c-general)">08</span>Proper induction training is mandatory before site entry. No untrained worker shall begin work unsupervised. <span class="rule-ref" style="background:rgba(51,65,85,0.1);color:var(--c-general)">IOSH · HSE</span></li>
+          <li style="border-left-color:var(--c-general)"><span class="rule-num" style="color:var(--c-general)">09</span>Incident investigations must follow the ICAM or TRIPOD model to identify root causes — not blame individuals. <span class="rule-ref" style="background:rgba(51,65,85,0.1);color:var(--c-general)">NEBOSH · SAIPEM</span></li>
+          <li style="border-left-color:var(--c-general)"><span class="rule-num" style="color:var(--c-general)">10</span>Safety management systems must be reviewed at minimum annually against ISO 45001 clause 9.3 objectives. <span class="rule-ref" style="background:rgba(51,65,85,0.1);color:var(--c-general)">ISO 45001</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ OSHA ══ -->
+  <div id="osha-section" class="reveal">
+    <div class="chapter-head">
+      <div class="chapter-num">02</div>
+      <div class="chapter-info">
+        <div class="chapter-org" style="color:var(--c-osha)">🇺🇸 United States</div>
+        <div class="chapter-title">OSHA Standards & Regulations</div>
+      </div>
+    </div>
+
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-osha)">🏭</div>
+        <div class="scard-meta">
+          <div class="scard-title">OSHA General Industry (29 CFR 1910)</div>
+          <div class="scard-sub">Standards for manufacturing, warehouses, offices and general workplaces</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-osha)"><span class="rule-num" style="color:var(--c-osha)">01</span>Employers must provide workplaces free from recognized serious hazards — the "General Duty Clause" Section 5(a)(1). <span class="rule-ref" style="background:rgba(214,78,18,0.1);color:var(--c-osha)">29 USC 654</span></li>
+          <li style="border-left-color:var(--c-osha)"><span class="rule-num" style="color:var(--c-osha)">02</span>Lockout/Tagout (LOTO): All energy sources must be isolated before maintenance — 29 CFR 1910.147. Failure leads to citations up to $15,625. <span class="rule-ref" style="background:rgba(214,78,18,0.1);color:var(--c-osha)">1910.147</span></li>
+          <li style="border-left-color:var(--c-osha)"><span class="rule-num" style="color:var(--c-osha)">03</span>Hazard Communication Standard (HazCom): Chemicals must be labeled with GHS pictograms. SDS must be accessible to all workers. <span class="rule-ref" style="background:rgba(214,78,18,0.1);color:var(--c-osha)">1910.1200</span></li>
+          <li style="border-left-color:var(--c-osha)"><span class="rule-num" style="color:var(--c-osha)">04</span>Confined Space: Atmospheric testing required before entry. An attendant must be present at all times. <span class="rule-ref" style="background:rgba(214,78,18,0.1);color:var(--c-osha)">1910.146</span></li>
+          <li style="border-left-color:var(--c-osha)"><span class="rule-num" style="color:var(--c-osha)">05</span>Respiratory Protection: Medical evaluation required before using respirators. Written program mandatory. <span class="rule-ref" style="background:rgba(214,78,18,0.1);color:var(--c-osha)">1910.134</span></li>
+          <li style="border-left-color:var(--c-osha)"><span class="rule-num" style="color:var(--c-osha)">06</span>Electrical safety: Only qualified persons may work on live circuits. Electrical panels must be clear and labeled. <span class="rule-ref" style="background:rgba(214,78,18,0.1);color:var(--c-osha)">1910.333</span></li>
+          <li style="border-left-color:var(--c-osha)"><span class="rule-num" style="color:var(--c-osha)">07</span>Recordkeeping: Work-related injuries must be logged in OSHA 300 Log. Fatalities reported within 8 hours. <span class="rule-ref" style="background:rgba(214,78,18,0.1);color:var(--c-osha)">1904</span></li>
+          <li style="border-left-color:var(--c-osha)"><span class="rule-num" style="color:var(--c-osha)">08</span>OSHA whistleblower protections: Employers cannot retaliate against workers for reporting hazards — Section 11(c). <span class="rule-ref" style="background:rgba(214,78,18,0.1);color:var(--c-osha)">Section 11(c)</span></li>
+          <li style="border-left-color:var(--c-osha)"><span class="rule-num" style="color:var(--c-osha)">09</span>OSHA 30-Hour Training: Supervisors and safety officers in high-risk industries must complete OSHA 30H outreach. <span class="rule-ref" style="background:rgba(214,78,18,0.1);color:var(--c-osha)">OSHA 30H</span></li>
+          <li style="border-left-color:var(--c-osha)"><span class="rule-num" style="color:var(--c-osha)">10</span>Walking/Working Surfaces: Floors must support loads, be kept clean, and have adequate drainage per 29 CFR 1910.22. <span class="rule-ref" style="background:rgba(214,78,18,0.1);color:var(--c-osha)">1910.22</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-osha)">🏗</div>
+        <div class="scard-meta">
+          <div class="scard-title">OSHA Construction (29 CFR 1926)</div>
+          <div class="scard-sub">Rules specific to construction sites and project-based work</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-osha)"><span class="rule-num" style="color:var(--c-osha)">01</span>Fall protection required at 6 feet in construction — guardrails, safety nets, or personal fall arrest systems. <span class="rule-ref" style="background:rgba(214,78,18,0.1);color:var(--c-osha)">1926.502</span></li>
+          <li style="border-left-color:var(--c-osha)"><span class="rule-num" style="color:var(--c-osha)">02</span>Scaffolding must be inspected by a competent person before each shift. Load capacity tags must be posted. <span class="rule-ref" style="background:rgba(214,78,18,0.1);color:var(--c-osha)">1926.451</span></li>
+          <li style="border-left-color:var(--c-osha)"><span class="rule-num" style="color:var(--c-osha)">03</span>Excavations deeper than 5 feet require protective systems (shoring, sloping, or shielding). <span class="rule-ref" style="background:rgba(214,78,18,0.1);color:var(--c-osha)">1926.652</span></li>
+          <li style="border-left-color:var(--c-osha)"><span class="rule-num" style="color:var(--c-osha)">04</span>Steel erection: Workers must be protected from falls during steel beam placement — decking and nets required. <span class="rule-ref" style="background:rgba(214,78,18,0.1);color:var(--c-osha)">1926.760</span></li>
+          <li style="border-left-color:var(--c-osha)"><span class="rule-num" style="color:var(--c-osha)">05</span>Hot work (welding, cutting): Fire watch required for 30 minutes after hot work completion. Area must be cleared of flammables. <span class="rule-ref" style="background:rgba(214,78,18,0.1);color:var(--c-osha)">1926.352</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ IOSH ══ -->
+  <div id="iosh-section" class="reveal">
+    <div class="chapter-head">
+      <div class="chapter-num">03</div>
+      <div class="chapter-info">
+        <div class="chapter-org" style="color:var(--c-iosh)">🇬🇧 United Kingdom</div>
+        <div class="chapter-title">IOSH — Managing Safely Framework</div>
+      </div>
+    </div>
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-iosh)">📗</div>
+        <div class="scard-meta">
+          <div class="scard-title">IOSH Managing Safely Principles</div>
+          <div class="scard-sub">For managers and supervisors responsible for people and processes</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-iosh)"><span class="rule-num" style="color:var(--c-iosh)">01</span>Managers must understand their legal duties — UK HASAWA 1974 places responsibilities on individuals, not just organizations. <span class="rule-ref" style="background:rgba(26,111,181,0.1);color:var(--c-iosh)">HASAWA 1974</span></li>
+          <li style="border-left-color:var(--c-iosh)"><span class="rule-num" style="color:var(--c-iosh)">02</span>Risk assessments must be "suitable and sufficient" — documented and reviewed when conditions change. Management of Health & Safety at Work Regulations 1999. <span class="rule-ref" style="background:rgba(26,111,181,0.1);color:var(--c-iosh)">MHSWR 1999</span></li>
+          <li style="border-left-color:var(--c-iosh)"><span class="rule-num" style="color:var(--c-iosh)">03</span>Behavior-Based Safety (BBS): Managers must positively reinforce safe behaviors, not just punish unsafe ones. <span class="rule-ref" style="background:rgba(26,111,181,0.1);color:var(--c-iosh)">IOSH BBS</span></li>
+          <li style="border-left-color:var(--c-iosh)"><span class="rule-num" style="color:var(--c-iosh)">04</span>Implement a safety management system: Plan → Do → Check → Act (PDCA cycle per BSI PAS 45001). <span class="rule-ref" style="background:rgba(26,111,181,0.1);color:var(--c-iosh)">IOSH · BSI</span></li>
+          <li style="border-left-color:var(--c-iosh)"><span class="rule-num" style="color:var(--c-iosh)">05</span>Analyze near-misses and unsafe conditions with equal priority as accidents — Heinrich's Triangle principle. <span class="rule-ref" style="background:rgba(26,111,181,0.1);color:var(--c-iosh)">IOSH Theory</span></li>
+          <li style="border-left-color:var(--c-iosh)"><span class="rule-num" style="color:var(--c-iosh)">06</span>Safety performance indicators (KPIs) must include both lagging (accident rates) and leading (inspections completed) metrics. <span class="rule-ref" style="background:rgba(26,111,181,0.1);color:var(--c-iosh)">IOSH Framework</span></li>
+          <li style="border-left-color:var(--c-iosh)"><span class="rule-num" style="color:var(--c-iosh)">07</span>Worker competence must be verified before task assignment — training records must be maintained and accessible. <span class="rule-ref" style="background:rgba(26,111,181,0.1);color:var(--c-iosh)">IOSH · HSE</span></li>
+          <li style="border-left-color:var(--c-iosh)"><span class="rule-num" style="color:var(--c-iosh)">08</span>Encourage safety innovation — IOSH supports technology-driven safety solutions including wearables and AI risk tools. <span class="rule-ref" style="background:rgba(26,111,181,0.1);color:var(--c-iosh)">IOSH 2024</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ NEBOSH ══ -->
+  <div id="nebosh-section" class="reveal">
+    <div class="chapter-head">
+      <div class="chapter-num">04</div>
+      <div class="chapter-info">
+        <div class="chapter-org" style="color:var(--c-nebosh)">📘 Global Qualification</div>
+        <div class="chapter-title">NEBOSH Safety Principles</div>
+      </div>
+    </div>
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-nebosh)">🎓</div>
+        <div class="scard-meta">
+          <div class="scard-title">NEBOSH IGC Core Principles</div>
+          <div class="scard-sub">International General Certificate — recognized in 130+ countries</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-nebosh)"><span class="rule-num" style="color:var(--c-nebosh)">01</span>Risk assessment is the foundation: Identify hazards → Evaluate risks → Implement controls → Monitor effectiveness. <span class="rule-ref" style="background:rgba(124,58,237,0.1);color:var(--c-nebosh)">NEBOSH IGC</span></li>
+          <li style="border-left-color:var(--c-nebosh)"><span class="rule-num" style="color:var(--c-nebosh)">02</span>Apply the Hierarchy of Controls: Eliminate → Substitute → Engineering controls → Admin controls → PPE (last resort). <span class="rule-ref" style="background:rgba(124,58,237,0.1);color:var(--c-nebosh)">HOC Model</span></li>
+          <li style="border-left-color:var(--c-nebosh)"><span class="rule-num" style="color:var(--c-nebosh)">03</span>Incident investigations using the "4 Ps": Person, Place, Plant, Procedures — not just focusing on human error. <span class="rule-ref" style="background:rgba(124,58,237,0.1);color:var(--c-nebosh)">NEBOSH Method</span></li>
+          <li style="border-left-color:var(--c-nebosh)"><span class="rule-num" style="color:var(--c-nebosh)">04</span>Safety responsibilities at every level: Directors → Managers → Supervisors → Workers — all have legal duties. <span class="rule-ref" style="background:rgba(124,58,237,0.1);color:var(--c-nebosh)">NEBOSH · IOSH</span></li>
+          <li style="border-left-color:var(--c-nebosh)"><span class="rule-num" style="color:var(--c-nebosh)">05</span>Monitoring must be proactive (audits, inspections) not reactive (after incidents). Reactive-only systems fail. <span class="rule-ref" style="background:rgba(124,58,237,0.1);color:var(--c-nebosh)">NEBOSH Unit 1</span></li>
+          <li style="border-left-color:var(--c-nebosh)"><span class="rule-num" style="color:var(--c-nebosh)">06</span>Occupational health: Employers must assess and control exposure to noise, dust, chemicals, and ergonomic hazards. <span class="rule-ref" style="background:rgba(124,58,237,0.1);color:var(--c-nebosh)">NEBOSH OH</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ISO ══ -->
+  <div id="iso-section" class="reveal">
+    <div class="chapter-head">
+      <div class="chapter-num">05</div>
+      <div class="chapter-info">
+        <div class="chapter-org" style="color:var(--c-iso)">🌐 International Standard</div>
+        <div class="chapter-title">ISO 45001 — Occupational Health & Safety</div>
+      </div>
+    </div>
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-iso)">📋</div>
+        <div class="scard-meta">
+          <div class="scard-title">ISO 45001:2018 Requirements</div>
+          <div class="scard-sub">Replaces OHSAS 18001 — world's most used OHS management standard</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-iso)"><span class="rule-num" style="color:var(--c-iso)">01</span>Clause 4: Context of the organization — identify internal/external factors affecting OHS objectives. <span class="rule-ref" style="background:rgba(8,145,178,0.1);color:var(--c-iso)">ISO 45001 §4</span></li>
+          <li style="border-left-color:var(--c-iso)"><span class="rule-num" style="color:var(--c-iso)">02</span>Clause 5: Top management must demonstrate leadership by integrating OHS into business strategy, not treating it as a separate function. <span class="rule-ref" style="background:rgba(8,145,178,0.1);color:var(--c-iso)">ISO 45001 §5</span></li>
+          <li style="border-left-color:var(--c-iso)"><span class="rule-num" style="color:var(--c-iso)">03</span>Clause 6: Hazard identification and risk assessment must consider all workers including contractors and visitors. <span class="rule-ref" style="background:rgba(8,145,178,0.1);color:var(--c-iso)">ISO 45001 §6</span></li>
+          <li style="border-left-color:var(--c-iso)"><span class="rule-num" style="color:var(--c-iso)">04</span>Clause 7: Documented information must be controlled — version-controlled procedures, forms, and records. <span class="rule-ref" style="background:rgba(8,145,178,0.1);color:var(--c-iso)">ISO 45001 §7</span></li>
+          <li style="border-left-color:var(--c-iso)"><span class="rule-num" style="color:var(--c-iso)">05</span>Clause 8: Operational planning — emergency preparedness and response procedures must be tested regularly. <span class="rule-ref" style="background:rgba(8,145,178,0.1);color:var(--c-iso)">ISO 45001 §8</span></li>
+          <li style="border-left-color:var(--c-iso)"><span class="rule-num" style="color:var(--c-iso)">06</span>Clause 9: Performance evaluation through internal audits, management review, and KPI monitoring. <span class="rule-ref" style="background:rgba(8,145,178,0.1);color:var(--c-iso)">ISO 45001 §9</span></li>
+          <li style="border-left-color:var(--c-iso)"><span class="rule-num" style="color:var(--c-iso)">07</span>Clause 10: Continual improvement — nonconformities must be corrected and recurrence prevented systematically. <span class="rule-ref" style="background:rgba(8,145,178,0.1);color:var(--c-iso)">ISO 45001 §10</span></li>
+          <li style="border-left-color:var(--c-iso)"><span class="rule-num" style="color:var(--c-iso)">08</span>Worker participation is mandatory — workers must be consulted on hazard identification and control selection. <span class="rule-ref" style="background:rgba(8,145,178,0.1);color:var(--c-iso)">ISO 45001 §5.4</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ILO ══ -->
+  <div id="ilo-section" class="reveal">
+    <div class="chapter-head">
+      <div class="chapter-num">06</div>
+      <div class="chapter-info">
+        <div class="chapter-org" style="color:var(--c-ilo)">🕊 United Nations Body</div>
+        <div class="chapter-title">ILO — International Labour Standards</div>
+      </div>
+    </div>
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-ilo)">🌍</div>
+        <div class="scard-meta">
+          <div class="scard-title">ILO OSH Conventions & Guidelines</div>
+          <div class="scard-sub">Ratified by 180+ countries — the basis of national safety law worldwide</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-ilo)"><span class="rule-num" style="color:var(--c-ilo)">01</span>ILO Convention C155 (1981): Every worker has the fundamental right to a safe and healthy working environment. <span class="rule-ref" style="background:rgba(5,150,105,0.1);color:var(--c-ilo)">ILO C155</span></li>
+          <li style="border-left-color:var(--c-ilo)"><span class="rule-num" style="color:var(--c-ilo)">02</span>ILO Convention C187 (2006): Governments must establish national OSH programs with measurable targets. <span class="rule-ref" style="background:rgba(5,150,105,0.1);color:var(--c-ilo)">ILO C187</span></li>
+          <li style="border-left-color:var(--c-ilo)"><span class="rule-num" style="color:var(--c-ilo)">03</span>ILO P155 Protocol: Work-related injuries must be compensated. Occupational disease must be recorded and reported. <span class="rule-ref" style="background:rgba(5,150,105,0.1);color:var(--c-ilo)">ILO P155</span></li>
+          <li style="border-left-color:var(--c-ilo)"><span class="rule-num" style="color:var(--c-ilo)">04</span>Safety committees must be formed at workplaces of 50+ workers — equal employer and worker representation. <span class="rule-ref" style="background:rgba(5,150,105,0.1);color:var(--c-ilo)">ILO C155</span></li>
+          <li style="border-left-color:var(--c-ilo)"><span class="rule-num" style="color:var(--c-ilo)">05</span>Workers have the right to remove themselves from imminent serious danger without retaliation. <span class="rule-ref" style="background:rgba(5,150,105,0.1);color:var(--c-ilo)">ILO C155 Art.13</span></li>
+          <li style="border-left-color:var(--c-ilo)"><span class="rule-num" style="color:var(--c-ilo)">06</span>ILO estimates 2.78 million work-related deaths occur annually. Most are preventable with proper safety systems. <span class="rule-ref" style="background:rgba(5,150,105,0.1);color:var(--c-ilo)">ILO 2023 Data</span></li>
+          <li style="border-left-color:var(--c-ilo)"><span class="rule-num" style="color:var(--c-ilo)">07</span>Decent Work Agenda: Safety is a human right — not a privilege — and must be accessible regardless of employment status. <span class="rule-ref" style="background:rgba(5,150,105,0.1);color:var(--c-ilo)">ILO DWA</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ARAMCO ══ -->
+  <div id="aramco-section" class="reveal">
+    <div class="chapter-head">
+      <div class="chapter-num">07</div>
+      <div class="chapter-info">
+        <div class="chapter-org" style="color:var(--c-aramco)">🛢 Saudi Arabia</div>
+        <div class="chapter-title">Saudi Aramco HSE Standards</div>
+      </div>
+    </div>
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-aramco)">🔶</div>
+        <div class="scard-meta">
+          <div class="scard-title">Aramco SAEP & GI Safety Requirements</div>
+          <div class="scard-sub">Among the world's most rigorous industrial HSE systems</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-aramco)"><span class="rule-num" style="color:var(--c-aramco)">01</span>SAEP-304: All workers must complete Aramco Safety Induction before accessing any Aramco facility. No exceptions. <span class="rule-ref" style="background:rgba(180,83,9,0.1);color:var(--c-aramco)">SAEP-304</span></li>
+          <li style="border-left-color:var(--c-aramco)"><span class="rule-num" style="color:var(--c-aramco)">02</span>GI-6.012: Permit to Work system — 7 types of permits including Hot Work, Confined Space, Electrical, and Excavation. <span class="rule-ref" style="background:rgba(180,83,9,0.1);color:var(--c-aramco)">GI-6.012</span></li>
+          <li style="border-left-color:var(--c-aramco)"><span class="rule-num" style="color:var(--c-aramco)">03</span>GI-0002.102: Drivers on Aramco roads must complete Defensive Driving Course (DDC). Speed governors on all company vehicles. <span class="rule-ref" style="background:rgba(180,83,9,0.1);color:var(--c-aramco)">GI-0002.102</span></li>
+          <li style="border-left-color:var(--c-aramco)"><span class="rule-num" style="color:var(--c-aramco)">04</span>SAEP-327: Scaffolding must be tagged Green (safe), Yellow (restricted), or Red (unsafe). No untagged scaffold is usable. <span class="rule-ref" style="background:rgba(180,83,9,0.1);color:var(--c-aramco)">SAEP-327</span></li>
+          <li style="border-left-color:var(--c-aramco)"><span class="rule-num" style="color:var(--c-aramco)">05</span>SAEP-363: Crane and lifting operations require a Lifting Plan, Rigging Study, and certified rigger/operator. <span class="rule-ref" style="background:rgba(180,83,9,0.1);color:var(--c-aramco)">SAEP-363</span></li>
+          <li style="border-left-color:var(--c-aramco)"><span class="rule-num" style="color:var(--c-aramco)">06</span>GI-1781.001: Life-Saving Rules — 8 non-negotiable rules. Violation results in immediate removal from site. <span class="rule-ref" style="background:rgba(180,83,9,0.1);color:var(--c-aramco)">Life-Saving Rules</span></li>
+          <li style="border-left-color:var(--c-aramco)"><span class="rule-num" style="color:var(--c-aramco)">07</span>SAEP-18: All incidents including near misses, first aid, and unsafe conditions must be reported within 24 hours. <span class="rule-ref" style="background:rgba(180,83,9,0.1);color:var(--c-aramco)">SAEP-18</span></li>
+          <li style="border-left-color:var(--c-aramco)"><span class="rule-num" style="color:var(--c-aramco)">08</span>Zero Harm philosophy: Aramco targets zero fatalities, zero major incidents. HSE KPIs reviewed by CEO quarterly. <span class="rule-ref" style="background:rgba(180,83,9,0.1);color:var(--c-aramco)">Aramco Vision</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SAIPEM ══ -->
+  <div id="saipem-section" class="reveal">
+    <div class="chapter-head">
+      <div class="chapter-num">08</div>
+      <div class="chapter-info">
+        <div class="chapter-org" style="color:var(--c-saipem)">⚙️ Italy / Global</div>
+        <div class="chapter-title">SAIPEM HSSE Management System</div>
+      </div>
+    </div>
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-saipem)">🔩</div>
+        <div class="scard-meta">
+          <div class="scard-title">SAIPEM Project HSSE Requirements</div>
+          <div class="scard-sub">Applied on offshore platforms, pipelines, and EPC megaprojects</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-saipem)"><span class="rule-num" style="color:var(--c-saipem)">01</span>SAIPEM requires project-specific HSSE Plans aligned with ISO 45001 and client requirements before project mobilization. <span class="rule-ref" style="background:rgba(190,24,93,0.1);color:var(--c-saipem)">SAIPEM HSE</span></li>
+          <li style="border-left-color:var(--c-saipem)"><span class="rule-num" style="color:var(--c-saipem)">02</span>STOP Cards: Every worker can and must stop any unsafe work using the STOP authority without fear of retaliation. <span class="rule-ref" style="background:rgba(190,24,93,0.1);color:var(--c-saipem)">STOP Authority</span></li>
+          <li style="border-left-color:var(--c-saipem)"><span class="rule-num" style="color:var(--c-saipem)">03</span>Golden Rules: 10 non-negotiable life-saving rules. Breach results in dismissal from project without appeal. <span class="rule-ref" style="background:rgba(190,24,93,0.1);color:var(--c-saipem)">Golden Rules</span></li>
+          <li style="border-left-color:var(--c-saipem)"><span class="rule-num" style="color:var(--c-saipem)">04</span>HAZID/HAZOP studies mandatory during project design phase to identify process hazards before construction begins. <span class="rule-ref" style="background:rgba(190,24,93,0.1);color:var(--c-saipem)">HAZID/HAZOP</span></li>
+          <li style="border-left-color:var(--c-saipem)"><span class="rule-num" style="color:var(--c-saipem)">05</span>Weekly HSSE meetings between project management and site safety teams — minutes documented and tracked. <span class="rule-ref" style="background:rgba(190,24,93,0.1);color:var(--c-saipem)">SAIPEM Procedure</span></li>
+          <li style="border-left-color:var(--c-saipem)"><span class="rule-num" style="color:var(--c-saipem)">06</span>Environmental compliance: SAIPEM applies ISO 14001 alongside OHS — spill prevention and waste management are critical. <span class="rule-ref" style="background:rgba(190,24,93,0.1);color:var(--c-saipem)">ISO 14001</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ TOPICS ══ -->
+  <div id="topics-section" class="reveal">
+    <div class="chapter-head">
+      <div class="chapter-num">09</div>
+      <div class="chapter-info">
+        <div class="chapter-org" style="color:var(--gold)">Applied Safety</div>
+        <div class="chapter-title">Topic-Based Safety Modules</div>
+      </div>
+    </div>
+
+    <!-- Fire Safety -->
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-fire)">🔥</div>
+        <div class="scard-meta">
+          <div class="scard-title">Fire Safety Management</div>
+          <div class="scard-sub">NFPA 10, OSHA 1910.157, Aramco GI-0002.000</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-fire)"><span class="rule-num" style="color:var(--c-fire)">01</span>Hot work permits required for all welding, cutting, grinding, and open flame operations. Fire watch assigned during and 30 min after. <span class="rule-ref" style="background:rgba(220,38,38,0.1);color:var(--c-fire)">OSHA 1926.352</span></li>
+          <li style="border-left-color:var(--c-fire)"><span class="rule-num" style="color:var(--c-fire)">02</span>Fire extinguishers: Class A (ordinary combustibles), B (flammable liquids), C (electrical), D (metals), K (cooking). Know the right type. <span class="rule-ref" style="background:rgba(220,38,38,0.1);color:var(--c-fire)">NFPA 10</span></li>
+          <li style="border-left-color:var(--c-fire)"><span class="rule-num" style="color:var(--c-fire)">03</span>PASS technique: Pull pin → Aim at base → Squeeze handle → Sweep side to side. Train all workers annually. <span class="rule-ref" style="background:rgba(220,38,38,0.1);color:var(--c-fire)">NFPA</span></li>
+          <li style="border-left-color:var(--c-fire)"><span class="rule-num" style="color:var(--c-fire)">04</span>Emergency exits must be illuminated, unobstructed, and tested monthly. Exit route maps posted at 100m intervals. <span class="rule-ref" style="background:rgba(220,38,38,0.1);color:var(--c-fire)">OSHA 1910.37</span></li>
+          <li style="border-left-color:var(--c-fire)"><span class="rule-num" style="color:var(--c-fire)">05</span>Fire alarm systems tested quarterly. Sprinkler systems inspected annually per NFPA 25. <span class="rule-ref" style="background:rgba(220,38,38,0.1);color:var(--c-fire)">NFPA 25</span></li>
+          <li style="border-left-color:var(--c-fire)"><span class="rule-num" style="color:var(--c-fire)">06</span>Flammable liquids stored in approved containers (FM/UL listed). No more than 25 gallons in workspaces without a safety cabinet. <span class="rule-ref" style="background:rgba(220,38,38,0.1);color:var(--c-fire)">NFPA 30</span></li>
+          <li style="border-left-color:var(--c-fire)"><span class="rule-num" style="color:var(--c-fire)">07</span>Fire drills at minimum twice yearly. Evacuation time recorded and assembly point confirmed every drill. <span class="rule-ref" style="background:rgba(220,38,38,0.1);color:var(--c-fire)">NFPA 101</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Work at Height -->
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-height)">🪜</div>
+        <div class="scard-meta">
+          <div class="scard-title">Working at Height Safety</div>
+          <div class="scard-sub">OSHA 1926.502, UK WAH Regs 2005, ARAMCO SAEP-327</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-height)"><span class="rule-num" style="color:var(--c-height)">01</span>Fall protection required at: 4ft (general industry), 6ft (construction), 8ft (scaffolding), 10ft (steel erection). <span class="rule-ref" style="background:rgba(3,105,161,0.1);color:var(--c-height)">OSHA Standards</span></li>
+          <li style="border-left-color:var(--c-height)"><span class="rule-num" style="color:var(--c-height)">02</span>Full-body harness with double lanyard or self-retracting lifeline (SRL) must be 100% tied-off at all times above height limit. <span class="rule-ref" style="background:rgba(3,105,161,0.1);color:var(--c-height)">OSHA 1926.502</span></li>
+          <li style="border-left-color:var(--c-height)"><span class="rule-num" style="color:var(--c-height)">03</span>Scaffolding tagged and inspected before each shift by a competent person. Green tag = safe, Yellow = restricted, Red = do not use. <span class="rule-ref" style="background:rgba(3,105,161,0.1);color:var(--c-height)">Aramco SAEP-327</span></li>
+          <li style="border-left-color:var(--c-height)"><span class="rule-num" style="color:var(--c-height)">04</span>Three-point contact rule for ladder use at all times — two hands and one foot, or two feet and one hand. <span class="rule-ref" style="background:rgba(3,105,161,0.1);color:var(--c-height)">OSHA Ladder Rules</span></li>
+          <li style="border-left-color:var(--c-height)"><span class="rule-num" style="color:var(--c-height)">05</span>Exclusion zones (barricades + safety nets) below aerial work to protect workers from falling objects. <span class="rule-ref" style="background:rgba(3,105,161,0.1);color:var(--c-height)">UK WAH Regs</span></li>
+          <li style="border-left-color:var(--c-height)"><span class="rule-num" style="color:var(--c-height)">06</span>Rescue plan: Before any work at height begins, a rescue plan for fall arrest must be in place and team briefed. <span class="rule-ref" style="background:rgba(3,105,161,0.1);color:var(--c-height)">IOSH Best Practice</span></li>
+          <li style="border-left-color:var(--c-height)"><span class="rule-num" style="color:var(--c-height)">07</span>Suspension Trauma: Workers suspended in a harness after fall must be rescued within 15 minutes to avoid fatal injury. <span class="rule-ref" style="background:rgba(3,105,161,0.1);color:var(--c-height)">ANSI Z359</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Confined Space -->
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-conf)">🚧</div>
+        <div class="scard-meta">
+          <div class="scard-title">Confined Space Entry</div>
+          <div class="scard-sub">OSHA 1910.146, Aramco GI-6.012.1, ISO 45001 §8</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-conf)"><span class="rule-num" style="color:var(--c-conf)">01</span>Atmospheric testing sequence: Oxygen (19.5%–23.5%) → LEL below 10% → CO below 25 ppm → H₂S below 1 ppm. <span class="rule-ref" style="background:rgba(79,70,229,0.1);color:var(--c-conf)">OSHA 1910.146</span></li>
+          <li style="border-left-color:var(--c-conf)"><span class="rule-num" style="color:var(--c-conf)">02</span>Entry permit system: New permit for every entry, every shift. Permit displayed at entry point and inside space. <span class="rule-ref" style="background:rgba(79,70,229,0.1);color:var(--c-conf)">Aramco GI-6.012.1</span></li>
+          <li style="border-left-color:var(--c-conf)"><span class="rule-num" style="color:var(--c-conf)">03</span>Attendant must maintain visual or verbal contact with entrants and track personnel count at all times. <span class="rule-ref" style="background:rgba(79,70,229,0.1);color:var(--c-conf)">OSHA 1910.146</span></li>
+          <li style="border-left-color:var(--c-conf)"><span class="rule-num" style="color:var(--c-conf)">04</span>Emergency retrieval equipment (tripod, lifeline, winch) must be stationed at entry point before work begins. <span class="rule-ref" style="background:rgba(79,70,229,0.1);color:var(--c-conf)">OSHA Standard</span></li>
+          <li style="border-left-color:var(--c-conf)"><span class="rule-num" style="color:var(--c-conf)">05</span>Continuous air monitoring during entry — not just at start. Conditions can change rapidly inside. <span class="rule-ref" style="background:rgba(79,70,229,0.1);color:var(--c-conf)">IOSH Guidance</span></li>
+          <li style="border-left-color:var(--c-conf)"><span class="rule-num" style="color:var(--c-conf)">06</span>Isolation: All energy (electrical, mechanical, pneumatic) and inflows (pipes, valves) must be isolated before entry. <span class="rule-ref" style="background:rgba(79,70,229,0.1);color:var(--c-conf)">LOTO + PTW</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Electrical Safety -->
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-elec)">⚡</div>
+        <div class="scard-meta">
+          <div class="scard-title">Electrical Safety & LOTO</div>
+          <div class="scard-sub">OSHA 1910.147, NFPA 70E, IEC 60364</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-elec)"><span class="rule-num" style="color:var(--c-elec)">01</span>LOTO procedure: Notify → Shut down → Isolate → Lock and tag → Release stored energy → Verify zero energy. <span class="rule-ref" style="background:rgba(245,158,11,0.1);color:var(--c-elec)">OSHA 1910.147</span></li>
+          <li style="border-left-color:var(--c-elec)"><span class="rule-num" style="color:var(--c-elec)">02</span>Arc Flash boundary: NFPA 70E requires arc flash hazard analysis and appropriate PPE (Arc-rated suits, face shields). <span class="rule-ref" style="background:rgba(245,158,11,0.1);color:var(--c-elec)">NFPA 70E</span></li>
+          <li style="border-left-color:var(--c-elec)"><span class="rule-num" style="color:var(--c-elec)">03</span>Only qualified persons (electricians with proof of competency) may work on live circuits above 50V. <span class="rule-ref" style="background:rgba(245,158,11,0.1);color:var(--c-elec)">OSHA 1910.333</span></li>
+          <li style="border-left-color:var(--c-elec)"><span class="rule-num" style="color:var(--c-elec)">04</span>Ground Fault Circuit Interrupters (GFCI) required for all temporary power tools in construction or wet locations. <span class="rule-ref" style="background:rgba(245,158,11,0.1);color:var(--c-elec)">OSHA 1926.404</span></li>
+          <li style="border-left-color:var(--c-elec)"><span class="rule-num" style="color:var(--c-elec)">05</span>Electrical panels must be labeled, cleared of obstructions (36-inch clearance minimum), and accessible for emergency shutoff. <span class="rule-ref" style="background:rgba(245,158,11,0.1);color:var(--c-elec)">NEC 110.26</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Chemical Safety -->
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-chem)">☣️</div>
+        <div class="scard-meta">
+          <div class="scard-title">Chemical Handling & HazCom</div>
+          <div class="scard-sub">GHS/SDS system, OSHA 1910.1200, REACH (EU)</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-chem)"><span class="rule-num" style="color:var(--c-chem)">01</span>GHS labeling: All chemical containers must show product identifier, signal word (Danger/Warning), hazard pictograms, and first aid. <span class="rule-ref" style="background:rgba(22,163,74,0.1);color:var(--c-chem)">GHS · UN</span></li>
+          <li style="border-left-color:var(--c-chem)"><span class="rule-num" style="color:var(--c-chem)">02</span>Safety Data Sheets (SDS) must have 16 sections per GHS format and be accessible to all workers — not locked in office. <span class="rule-ref" style="background:rgba(22,163,74,0.1);color:var(--c-chem)">OSHA 1910.1200</span></li>
+          <li style="border-left-color:var(--c-chem)"><span class="rule-num" style="color:var(--c-chem)">03</span>Secondary containers must be labeled when chemicals are decanted. "Unlabeled" is an automatic violation. <span class="rule-ref" style="background:rgba(22,163,74,0.1);color:var(--c-chem)">OSHA HazCom</span></li>
+          <li style="border-left-color:var(--c-chem)"><span class="rule-num" style="color:var(--c-chem)">04</span>Emergency eyewash stations within 10 seconds travel time from any chemical hazard area — ANSI Z358.1. <span class="rule-ref" style="background:rgba(22,163,74,0.1);color:var(--c-chem)">ANSI Z358.1</span></li>
+          <li style="border-left-color:var(--c-chem)"><span class="rule-num" style="color:var(--c-chem)">05</span>Chemical storage: Incompatible chemicals segregated — acids separated from bases, oxidizers from flammables. <span class="rule-ref" style="background:rgba(22,163,74,0.1);color:var(--c-chem)">NFPA 400</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PTW -->
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-ptw)">📝</div>
+        <div class="scard-meta">
+          <div class="scard-title">Permit to Work (PTW) System</div>
+          <div class="scard-sub">Aramco GI-6.012, IOSH Guidelines, SAIPEM PTW Procedure</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-ptw)"><span class="rule-num" style="color:var(--c-ptw)">01</span>No work shall commence without an approved, signed permit. Verbal permits do not exist in a safe workplace. <span class="rule-ref" style="background:rgba(124,58,237,0.1);color:var(--c-ptw)">Aramco GI-6.012</span></li>
+          <li style="border-left-color:var(--c-ptw)"><span class="rule-num" style="color:var(--c-ptw)">02</span>PTW types: Cold Work, Hot Work, Confined Space Entry, Electrical Isolation, Excavation, Radiography, Critical Lift. <span class="rule-ref" style="background:rgba(124,58,237,0.1);color:var(--c-ptw)">PTW Types</span></li>
+          <li style="border-left-color:var(--c-ptw)"><span class="rule-num" style="color:var(--c-ptw)">03</span>Permit Issuer (Area Authority) and Permit Receiver (Work Supervisor) must jointly inspect the site before signing. <span class="rule-ref" style="background:rgba(124,58,237,0.1);color:var(--c-ptw)">IOSH Framework</span></li>
+          <li style="border-left-color:var(--c-ptw)"><span class="rule-num" style="color:var(--c-ptw)">04</span>Work must stop and permit re-evaluated if: scope changes, conditions change, shift changes, or incident occurs. <span class="rule-ref" style="background:rgba(124,58,237,0.1);color:var(--c-ptw)">SAIPEM PTW</span></li>
+          <li style="border-left-color:var(--c-ptw)"><span class="rule-num" style="color:var(--c-ptw)">05</span>Permit closure: Site inspection, reinstatement of guards, removal of tools/personnel, and issuer sign-off required. <span class="rule-ref" style="background:rgba(124,58,237,0.1);color:var(--c-ptw)">Aramco / SAIPEM</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Lifting & Rigging -->
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-lift)">⛓️</div>
+        <div class="scard-meta">
+          <div class="scard-title">Lifting & Rigging Safety</div>
+          <div class="scard-sub">Aramco SAEP-363, ASME B30, BS 7121</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-lift)"><span class="rule-num" style="color:var(--c-lift)">01</span>Never exceed the Safe Working Load (SWL/WLL) of slings, hooks, or crane — use the LOWEST rated component. <span class="rule-ref" style="background:rgba(159,18,57,0.1);color:var(--c-lift)">ASME B30</span></li>
+          <li style="border-left-color:var(--c-lift)"><span class="rule-num" style="color:var(--c-lift)">02</span>Critical lifts (>75% crane capacity, over personnel, or unusual conditions) require a written Lift Plan approved by engineer. <span class="rule-ref" style="background:rgba(159,18,57,0.1);color:var(--c-lift)">Aramco SAEP-363</span></li>
+          <li style="border-left-color:var(--c-lift)"><span class="rule-num" style="color:var(--c-lift)">03</span>All lifting equipment inspected: Daily visual check + periodic load test (slings: 6-monthly, cranes: annually). <span class="rule-ref" style="background:rgba(159,18,57,0.1);color:var(--c-lift)">BS 7121</span></li>
+          <li style="border-left-color:var(--c-lift)"><span class="rule-num" style="color:var(--c-lift)">04</span>Exclusion zone: No personnel under suspended load at any time. Tag lines used to control swinging. <span class="rule-ref" style="background:rgba(159,18,57,0.1);color:var(--c-lift)">IOSH / OSHA</span></li>
+          <li style="border-left-color:var(--c-lift)"><span class="rule-num" style="color:var(--c-lift)">05</span>Rigger-to-operator communication: One designated signalman per lift. Pre-agreed hand signals or radio used exclusively. <span class="rule-ref" style="background:rgba(159,18,57,0.1);color:var(--c-lift)">ASME B30.5</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PPE -->
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-ppe)">🦺</div>
+        <div class="scard-meta">
+          <div class="scard-title">PPE Selection & Management</div>
+          <div class="scard-sub">OSHA 1910.132, EN 365, ANSI Standards</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-ppe)"><span class="rule-num" style="color:var(--c-ppe)">01</span>PPE is the LAST line of defense — controls in the hierarchy (elimination, substitution, engineering) must be exhausted first. <span class="rule-ref" style="background:rgba(6,95,70,0.1);color:var(--c-ppe)">HOC Model</span></li>
+          <li style="border-left-color:var(--c-ppe)"><span class="rule-num" style="color:var(--c-ppe)">02</span>Employer must provide PPE at no cost to workers — OSHA 1910.132(h) amendment. <span class="rule-ref" style="background:rgba(6,95,70,0.1);color:var(--c-ppe)">OSHA 1910.132</span></li>
+          <li style="border-left-color:var(--c-ppe)"><span class="rule-num" style="color:var(--c-ppe)">03</span>Helmet types: Type I (top only) vs Type II (top + lateral). Class E (electrical), G (general), C (conductive). <span class="rule-ref" style="background:rgba(6,95,70,0.1);color:var(--c-ppe)">ANSI Z89.1</span></li>
+          <li style="border-left-color:var(--c-ppe)"><span class="rule-num" style="color:var(--c-ppe)">04</span>Safety footwear: Steel toe (ANSI Z41 or ASTM F2413) required in areas with foot hazards. Metatarsal protection for heavy objects. <span class="rule-ref" style="background:rgba(6,95,70,0.1);color:var(--c-ppe)">ASTM F2413</span></li>
+          <li style="border-left-color:var(--c-ppe)"><span class="rule-num" style="color:var(--c-ppe)">05</span>Hearing protection: Required when noise exceeds 85 dBA (TWA 8hr). Earplugs rated by NRR — select appropriate for exposure level. <span class="rule-ref" style="background:rgba(6,95,70,0.1);color:var(--c-ppe)">OSHA 1910.95</span></li>
+          <li style="border-left-color:var(--c-ppe)"><span class="rule-num" style="color:var(--c-ppe)">06</span>Eye protection: Safety glasses (ANSI Z87.1) for basic hazards. Goggles for chemical splash. Face shields for flying particles. <span class="rule-ref" style="background:rgba(6,95,70,0.1);color:var(--c-ppe)">ANSI Z87.1</span></li>
+          <li style="border-left-color:var(--c-ppe)"><span class="rule-num" style="color:var(--c-ppe)">07</span>PPE inspection: Before each use. Harnesses with impact loads must be removed from service immediately. <span class="rule-ref" style="background:rgba(6,95,70,0.1);color:var(--c-ppe)">EN 365 · ANSI</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Emergency Response -->
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-emg)">🚨</div>
+        <div class="scard-meta">
+          <div class="scard-title">Emergency Response & Preparedness</div>
+          <div class="scard-sub">OSHA 1910.38, ISO 45001 §8.2, NFPA 1600</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-emg)"><span class="rule-num" style="color:var(--c-emg)">01</span>Written Emergency Action Plan (EAP) required for all employers with 10+ workers. Must include evacuation routes and roles. <span class="rule-ref" style="background:rgba(153,27,27,0.1);color:var(--c-emg)">OSHA 1910.38</span></li>
+          <li style="border-left-color:var(--c-emg)"><span class="rule-num" style="color:var(--c-emg)">02</span>First aid kits stocked per ANSI Z308.1 — contents based on specific hazards of workplace, not generic kit. <span class="rule-ref" style="background:rgba(153,27,27,0.1);color:var(--c-emg)">ANSI Z308.1</span></li>
+          <li style="border-left-color:var(--c-emg)"><span class="rule-num" style="color:var(--c-emg)">03</span>AED (Automated External Defibrillator) accessible within 3 minutes of any cardiac arrest location — best practice. <span class="rule-ref" style="background:rgba(153,27,27,0.1);color:var(--c-emg)">Heart Assoc.</span></li>
+          <li style="border-left-color:var(--c-emg)"><span class="rule-num" style="color:var(--c-emg)">04</span>Muster points: All evacuation assembly areas posted on site maps and drilled bi-annually. Head count taken by supervisor. <span class="rule-ref" style="background:rgba(153,27,27,0.1);color:var(--c-emg)">ISO 45001 §8.2</span></li>
+          <li style="border-left-color:var(--c-emg)"><span class="rule-num" style="color:var(--c-emg)">05</span>Emergency communication: Single emergency number posted at all phones. Chain of notification documented. <span class="rule-ref" style="background:rgba(153,27,27,0.1);color:var(--c-emg)">NFPA 1600</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Safety Culture -->
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-culture)">🏆</div>
+        <div class="scard-meta">
+          <div class="scard-title">Building a Safety Culture</div>
+          <div class="scard-sub">IOSH, NEBOSH, DuPont Bradley Curve, Hearts & Minds</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-culture)"><span class="rule-num" style="color:var(--c-culture)">01</span>DuPont Bradley Curve: Safety culture evolves through 4 stages — Reactive → Dependent → Independent → Interdependent. <span class="rule-ref" style="background:rgba(109,40,217,0.1);color:var(--c-culture)">DuPont</span></li>
+          <li style="border-left-color:var(--c-culture)"><span class="rule-num" style="color:var(--c-culture)">02</span>Just Culture: Distinguish between honest mistakes, at-risk behavior, and reckless behavior. Not all incidents are "human error." <span class="rule-ref" style="background:rgba(109,40,217,0.1);color:var(--c-culture)">IOSH Framework</span></li>
+          <li style="border-left-color:var(--c-culture)"><span class="rule-num" style="color:var(--c-culture)">03</span>No-Blame Reporting: Workers must feel psychologically safe to report hazards. Punitive systems reduce reporting by 60%. <span class="rule-ref" style="background:rgba(109,40,217,0.1);color:var(--c-culture)">HSE Research</span></li>
+          <li style="border-left-color:var(--c-culture)"><span class="rule-num" style="color:var(--c-culture)">04</span>Safety leadership walks (management safety tours): Senior leaders must be visible on site, not only in board rooms. <span class="rule-ref" style="background:rgba(109,40,217,0.1);color:var(--c-culture)">IOSH · HSE</span></li>
+          <li style="border-left-color:var(--c-culture)"><span class="rule-num" style="color:var(--c-culture)">05</span>Reward safe behavior — not just zero-accident records. Celebrating near-miss reporting creates stronger cultures. <span class="rule-ref" style="background:rgba(109,40,217,0.1);color:var(--c-culture)">NEBOSH Best Practice</span></li>
+          <li style="border-left-color:var(--c-culture)"><span class="rule-num" style="color:var(--c-culture)">06</span>Hearts & Minds toolkit (Shell): Engage workers emotionally in safety — use stories, examples, not just rules. <span class="rule-ref" style="background:rgba(109,40,217,0.1);color:var(--c-culture)">Shell H&M</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Road Safety -->
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-road)">🚗</div>
+        <div class="scard-meta">
+          <div class="scard-title">Road & Vehicle Safety</div>
+          <div class="scard-sub">Aramco GI-0002.102, IOSH Road Risk, ISO 39001</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-road)"><span class="rule-num" style="color:var(--c-road)">01</span>Vehicle Pre-Use Inspection (DRSABC): Dashboard → Rubber/tyres → Safety devices → Accessories → Battery → Checks. <span class="rule-ref" style="background:rgba(29,78,216,0.1);color:var(--c-road)">SAIPEM / Aramco</span></li>
+          <li style="border-left-color:var(--c-road)"><span class="rule-num" style="color:var(--c-road)">02</span>No mobile phone use while driving — even hands-free poses 4x crash risk. Complete ban on many project sites. <span class="rule-ref" style="background:rgba(29,78,216,0.1);color:var(--c-road)">WHO / Aramco</span></li>
+          <li style="border-left-color:var(--c-road)"><span class="rule-num" style="color:var(--c-road)">03</span>Defensive Driving Course (DDC) mandatory before operating any company vehicle — NSC or Aramco-approved course. <span class="rule-ref" style="background:rgba(29,78,216,0.1);color:var(--c-road)">Aramco GI-0002.102</span></li>
+          <li style="border-left-color:var(--c-road)"><span class="rule-num" style="color:var(--c-road)">04</span>Seat belts mandatory for all occupants — all seats, all journeys, regardless of road type or distance. <span class="rule-ref" style="background:rgba(29,78,216,0.1);color:var(--c-road)">ILO · WHO</span></li>
+          <li style="border-left-color:var(--c-road)"><span class="rule-num" style="color:var(--c-road)">05</span>ISO 39001: Road traffic safety management system — allows organizations to systematically reduce road fatalities. <span class="rule-ref" style="background:rgba(29,78,216,0.1);color:var(--c-road)">ISO 39001</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Excavation -->
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-excav)">⛏️</div>
+        <div class="scard-meta">
+          <div class="scard-title">Excavation & Trenching Safety</div>
+          <div class="scard-sub">OSHA 1926.652, BS 6164, Aramco SAEP standards</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-excav)"><span class="rule-num" style="color:var(--c-excav)">01</span>Any excavation over 1.2m (UK) / 5ft (US) requires a protective system — sloping, shoring, or trench box. <span class="rule-ref" style="background:rgba(146,64,14,0.1);color:var(--c-excav)">OSHA 1926.652</span></li>
+          <li style="border-left-color:var(--c-excav)"><span class="rule-num" style="color:var(--c-excav)">02</span>Underground utility check (CAT/Genny scan) mandatory before any excavation begins. Call 811 (US) / Click Before You Dig. <span class="rule-ref" style="background:rgba(146,64,14,0.1);color:var(--c-excav)">OSHA / Aramco</span></li>
+          <li style="border-left-color:var(--c-excav)"><span class="rule-num" style="color:var(--c-excav)">03</span>Daily inspection by competent person before each shift and after any weather event or vibration nearby. <span class="rule-ref" style="background:rgba(146,64,14,0.1);color:var(--c-excav)">OSHA 1926.651</span></li>
+          <li style="border-left-color:var(--c-excav)"><span class="rule-num" style="color:var(--c-excav)">04</span>Spoil heap minimum 0.6m from trench edge. Heavy equipment must not approach within collapse zone. <span class="rule-ref" style="background:rgba(146,64,14,0.1);color:var(--c-excav)">BS 6164</span></li>
+          <li style="border-left-color:var(--c-excav)"><span class="rule-num" style="color:var(--c-excav)">05</span>Ladders or ramps at maximum 7.5m intervals for quick exit. Workers must not jump into or out of trenches. <span class="rule-ref" style="background:rgba(146,64,14,0.1);color:var(--c-excav)">OSHA 1926.651</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mechanical Safety -->
+    <div class="scard" data-searchable>
+      <div class="scard-header" onclick="toggleCard(this)">
+        <div class="scard-icon" style="background:var(--c-mech)">⚙️</div>
+        <div class="scard-meta">
+          <div class="scard-title">Mechanical & Machine Safety</div>
+          <div class="scard-sub">OSHA 1910.217, EN ISO 13849, ANSI B11</div>
+        </div>
+        <div class="scard-toggle">▼</div>
+      </div>
+      <div class="scard-body">
+        <ul class="rules-list">
+          <li style="border-left-color:var(--c-mech)"><span class="rule-num" style="color:var(--c-mech)">01</span>Machine guarding: All point-of-operation, power transmission, and nip points must have fixed or interlocked guards. <span class="rule-ref" style="background:rgba(30,64,175,0.1);color:var(--c-mech)">OSHA 1910.212</span></li>
+          <li style="border-left-color:var(--c-mech)"><span class="rule-num" style="color:var(--c-mech)">02</span>Emergency stop (E-stop) buttons: Red, mushroom-shaped, within operator reach and tested at start of each shift. <span class="rule-ref" style="background:rgba(30,64,175,0.1);color:var(--c-mech)">EN ISO 13850</span></li>
+          <li style="border-left-color:var(--c-mech)"><span class="rule-num" style="color:var(--c-mech)">03</span>Safe distance formula: Ds = K × T (safety distance = hand speed constant × stopping time) for presence-sensing devices. <span class="rule-ref" style="background:rgba(30,64,175,0.1);color:var(--c-mech)">EN ISO 13855</span></li>
+          <li style="border-left-color:var(--c-mech)"><span class="rule-num" style="color:var(--c-mech)">04</span>Loose clothing, jewelry, long hair, and gloves (near rotating equipment) must be secured or removed. <span class="rule-ref" style="background:rgba(30,64,175,0.1);color:var(--c-mech)">IOSH / OSHA</span></li>
+          <li style="border-left-color:var(--c-mech)"><span class="rule-num" style="color:var(--c-mech)">05</span>Preventive maintenance schedules must be documented and followed — breakdown maintenance alone is insufficient. <span class="rule-ref" style="background:rgba(30,64,175,0.1);color:var(--c-mech)">ISO 45001</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /topics-section -->
+
+  <!-- AUTHOR NOTE -->
+  <div class="info-box reveal" style="margin-top:60px">
+    <h3>✍️ About This Resource</h3>
+    <p>This safety knowledge hub is curated and written by <strong style="color:var(--gold2)">Md. Mahmodul Hasan</strong>, a certified Safety Specialist holding qualifications in OSHA 30H (IBSP), IOSH Managing Safely, EOSH Industrial OHS, Fire Safety Management, Work Permit Receiver, First Aid, Scaffolding, Lifting & Rigging, Work at Height, and more. All content references authoritative sources including OSHA, IOSH, NEBOSH, ISO, ILO, Aramco, and SAIPEM. This page is updated as new standards are issued. Share freely — safety knowledge saves lives.</p>
+    <p style="margin-top:12px">📧 Contact: <strong style="color:var(--gold2)">mmahmodul24@gmail.com</strong> &nbsp;|&nbsp; 🌐 <a href="index.html" style="color:var(--gold2)">mahmodulwebsite.github.io</a></p>
+  </div>
+
+</div><!-- /page -->
+
+<footer class="page-footer">
+  <p>&copy; <span>Md. Mahmodul Hasan</span> · Safety Specialist · Bangladesh · 2025</p>
+  <p style="margin-top:5px;font-size:11px">References: OSHA, IOSH, NEBOSH, ISO, ILO, Aramco, SAIPEM, NFPA, ANSI, HSE, IEC</p>
+</footer>
+
+<button id="sTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+
+<script>
+// Toggle cards
+function toggleCard(header) {
+  const card = header.parentElement;
+  card.classList.toggle('open');
+}
+
+// Scroll reveal
+const obs = new IntersectionObserver(es => {
+  es.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.07 });
+document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+
+// Scroll top btn
+window.addEventListener('scroll', () => {
+  document.getElementById('sTop').style.display = window.scrollY > 400 ? 'block' : 'none';
+});
+
+// Sticky nav active
+function scrollTo(id) {
+  const el = document.getElementById(id);
+  if(el) { window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' }); }
+  document.querySelectorAll('.snav-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+// Search
+function doSearch() {
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  document.querySelectorAll('.scard').forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = (!q || text.includes(q)) ? '' : 'none';
+    if(q && text.includes(q)) card.classList.add('open');
+  });
+  document.querySelectorAll('.cert-group,.chapter-head,.info-box,.org-grid').forEach(el => {
+    el.style.display = '';
+  });
+}
+
+// Open first card of each section by default
+document.querySelectorAll('.scard').forEach((card, i) => {
+  if(i === 0) card.classList.add('open');
+});
+</script>
+</body>
+</html>
